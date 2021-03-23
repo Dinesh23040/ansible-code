@@ -1,6 +1,4 @@
-- hosts: localhost
-  user: chilakgo
-  connection: local
+- hosts: webservers
   vars:
     test_var: true
   tasks:

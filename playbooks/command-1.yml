@@ -16,5 +16,5 @@
      - name: To create a folder using command module
        command: mkdir -p /opt/command
        args:
-               #         creates: /opt/command
+         creates: /opt/command
          chdir: /opt

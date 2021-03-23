@@ -1,0 +1,16 @@
+# This Playbook will define vairables and use them across the code
+
+# HEADER SECTION
+ - name: This playbook will playbook will create file
+   hosts: webserver
+
+# TASK SECTION
+   tasks:
+     - name: To install package named "{{ mypackage }}"
+       file:
+         path: "/opt/ansible/test1"
+         owner: ubuntu
+         group: ubuntu
+         mode: 0755
+
+

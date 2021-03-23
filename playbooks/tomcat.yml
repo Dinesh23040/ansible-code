@@ -7,7 +7,7 @@
    gather_facts: True
    vars:
      java: openjdk-8-jdk
-     url: https://downloads.apache.org/tomcat/tomcat-8/v8.5.58/bin/apache-tomcat-8.5.58.tar.gz
+     url: https://mirror.olnevhost.net/pub/apache/tomcat/tomcat-8/v8.5.64/bin/apache-tomcat-8.5.64.tar.gz
      tomcat: apache-tomcat-8.5.58
 
 # TASK SECTION
@@ -65,16 +65,16 @@
 
      - name: to fetch the server.xml file from remote servers
        fetch:
-         src: /opt/apache-tomcat-8.5.58/conf/server.xml
+         src: /opt/apache-tomcat-8.5.64/conf/server.xml
          dest: /opt/
 
      - name: To update the apache tomcat config
        copy:
          src: /opt/server.xml
-         dest: /opt/apache-tomcat-8.5.58/conf/server.xml
+         dest: /opt/apache-tomcat-8.5.64/conf/server.xml
          owner: tomcat
          group: tomcatadm
        ignore_errors: yes
 
      - name: To start apache tomcat
-       command: nohup /opt/apache-tomcat-8.5.58/bin/startup.sh &
+       command: nohup /opt/apache-tomcat-8.5.64/bin/startup.sh &
