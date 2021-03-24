@@ -4,6 +4,6 @@
 
 
  - include: install.yml
- - include: config.yml
+ - include: configuration.yml
  - include: service.yml
  - include: java.yml

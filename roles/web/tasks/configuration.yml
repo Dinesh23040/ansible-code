@@ -1,0 +1,5 @@
+---
+
+ - name: configuration_for_apache2
+   copy: src=index.html dest=/var/www/html
+       
